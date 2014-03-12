@@ -1,0 +1,31 @@
+<h1>Listing orders</h1>
+ 
+<%= link_to 'New order', new_order_path %>
+
+<table>
+  <tr>
+    <th>Status</th>
+    <th>Payment Method</th>
+    <th>Shipping Address</th>
+    <th>Shipping City</th>
+    <th>Customer Name</th>
+    <th>Customer Last Name</th>
+  </tr>
+ 
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%= order.status %></td>
+      <td><%= order.payment_method %></td>
+      <td><%= order.shipping_address %></td>
+      <td><%= order.shipping_city %></td>
+      <td><%= order.customer_name %></td>
+      <td><%= order.customer_last_name %></td>
+      <td><%= link_to 'Show', order %></td>
+      <td><%= link_to 'Edit', edit_order_path(order) %></td>
+      <td><%= link_to 'Destroy', order_path(order),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
+
+

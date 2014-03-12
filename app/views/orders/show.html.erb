@@ -1,0 +1,31 @@
+<p>
+  <strong>Status:</strong>
+  <%= @order.status %>
+</p>
+ 
+<p>
+  <strong>Payment Method:</strong>
+  <%= @order.payment_method %>
+</p>
+
+<p>
+  <strong>Shipping Address:</strong>
+  <%= @order.shipping_address %>
+</p>
+
+<p>
+  <strong>Shipping City:</strong>
+  <%= @order.shipping_city %>
+</p>
+
+<p>
+  <strong>Customer Name:</strong>
+  <%= @order.customer_name %>
+</p>
+
+<p>
+  <strong>Customer Last Name:</strong>
+  <%= @order.customer_last_name %>
+</p>
+
+<%= link_to 'Back', orders_path %>
