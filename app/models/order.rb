@@ -5,4 +5,7 @@ class Order < ActiveRecord::Base
   validates :shipping_city, presence: true
   validates :customer_name, presence: true
   validates :customer_last_name, presence: true
+
+  has_many :lineitems
+  has_many :products, through: :lineitems
 end
